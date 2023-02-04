@@ -1,5 +1,5 @@
 # First Ever Unity Project
-My first ever fully functional game.
+My first ever fully functional game.  
 ***Really want to make it worth for evryone's playing***
 
 ## Stuffs to know
