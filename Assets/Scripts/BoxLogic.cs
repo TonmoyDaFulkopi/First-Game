@@ -18,12 +18,17 @@ public class BoxLogic : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+
+    private void OnTriggerStay(Collider other)
     {
-        Debug.Log("Reached here");
-        if (other.tag == "Player")
+        GunLogic gunLogic = other.GetComponentInChildren<GunLogic>();
+
+        //NOTE: The BEST WAY to AVOID NULLPOINTEREXCEPTION IS TO CONDITIONAL WITH OBJECT like here gunLogic!!!!!!!!!!!!!!!!
+
+        if (other.tag == "Player" && gunLogic)
         {
-            GunLogic gunLogic = other.GetComponentInChildren<GunLogic>();
+            // Debug.Log("Reached here");
+
             gunLogic.refillAmmo();
 
             Destroy(gameObject);
