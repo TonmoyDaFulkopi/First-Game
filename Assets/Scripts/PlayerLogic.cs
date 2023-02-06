@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class PlayerLogic : MonoBehaviour
 {
@@ -36,10 +38,18 @@ public class PlayerLogic : MonoBehaviour
     [SerializeField]
     Transform weaponEquipPosition;
 
+
+    [SerializeField]
+    Text m_healthText;
+
+    int m_playerHealth = 100;
+
     // Start is called before the first frame update
     void Start()
     {
         m_charactercontroller = GetComponent<CharacterController>();
+
+        iniHealthText();
     }
 
     // Update is called once per frame
@@ -96,6 +106,11 @@ public class PlayerLogic : MonoBehaviour
         }
     }
 
+    void iniHealthText()
+    {
+        m_healthText.text = "Health: " + m_playerHealth;
+    }
+
 
     void rotateTowardsCursor()
     {
@@ -113,7 +128,7 @@ public class PlayerLogic : MonoBehaviour
         // Vector3.up -> +Vector2 of y AXIS
         // rotates around y axis
         // -angle deyar lagbe noile ulta axis dhore kor
-        transform.rotation = Quaternion.AngleAxis(+angle, Vector3.down);
+        transform.rotation = Quaternion.AngleAxis(+angle - 30, Vector3.down);
     }
 
 

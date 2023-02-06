@@ -107,7 +107,7 @@ public class GunLogic : MonoBehaviour
 
     public void unequipGun()
     {
-        m_rigidBody.AddForce(transform.up * 100f);
+        m_rigidBody.AddForce(transform.forward * 200f);
         m_isEquipped = false;
 
         m_collider.enabled = true;
