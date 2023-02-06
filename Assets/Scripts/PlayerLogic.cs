@@ -49,7 +49,7 @@ public class PlayerLogic : MonoBehaviour
     {
         m_charactercontroller = GetComponent<CharacterController>();
 
-        iniHealthText();
+        setHealthText();
     }
 
     // Update is called once per frame
@@ -106,9 +106,16 @@ public class PlayerLogic : MonoBehaviour
         }
     }
 
-    void iniHealthText()
+    void setHealthText()
     {
         m_healthText.text = "Health: " + m_playerHealth;
+    }
+
+    public void takeDamage(int dmg)
+    {
+        m_playerHealth -= dmg;
+
+        setHealthText();
     }
 
 

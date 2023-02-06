@@ -39,6 +39,8 @@
      <Compile Include="Assets\Scripts\BoxLogic.cs" />
      <Compile Include="Assets\Scripts\BuletLogic.cs" />
      <Compile Include="Assets\Scripts\CoinLogic.cs" />
+     <Compile Include="Assets\Scripts\DamageBoxLogic.cs" />
+     <Compile Include="Assets\Scripts\EnemyLogic.cs" />
      <Compile Include="Assets\Scripts\GunLogic.cs" />
      <Compile Include="Assets\Scripts\PlayerLogic.cs" />
      <Compile Include="Assets\Scripts\SphereLogic.cs" />
